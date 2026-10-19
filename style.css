@@ -64,3 +64,42 @@ h2 {
 .wp-block-image {
     margin-bottom: 20px;
 }
+
+/* Improvement 4: Mobile Responsive Refinement */
+
+@media (max-width: 768px) {
+    .wp-block-group {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .wp-block-columns {
+        gap: 15px;
+    }
+
+    .wp-block-button__link {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}
+
+/* Fix hero text on smaller screens */
+
+@media (max-width: 768px) {
+
+    .wp-block-cover h1 {
+        font-size: 42px;
+        line-height: 1.2;
+        overflow-wrap: break-word;
+    }
+
+    .wp-block-cover p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .wp-block-cover .wp-block-cover__inner-container {
+        padding: 20px;
+    }
+}
