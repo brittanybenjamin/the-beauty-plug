@@ -103,3 +103,12 @@ h2 {
         padding: 20px;
     }
 }
+
+/* Navigation Link Hover Effect */
+
+.wp-block-navigation .wp-block-navigation-item__content:hover,
+.wp-block-navigation .wp-block-navigation-item__content:hover .wp-block-navigation-item__label {
+    color: #a98776 !important;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
