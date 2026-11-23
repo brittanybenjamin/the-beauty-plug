@@ -108,7 +108,206 @@ h2 {
 
 .wp-block-navigation .wp-block-navigation-item__content:hover,
 .wp-block-navigation .wp-block-navigation-item__content:hover .wp-block-navigation-item__label {
-    color: #a98776 !important;
+    color: #765344 !important;
     text-decoration: underline;
     transition: color 0.3s ease;
+}
+
+/* ==========================================
+   02. COLOURS & BACKGROUNDS
+   ========================================== */
+
+/*
+   The Beauty Plug uses a neutral colour
+   palette to create a modern, professional
+   appearance for a beauty services website.
+*/
+
+:root {
+    --beauty-dark: #292421;
+    --beauty-brown: #765344;
+    --beauty-cream: #f8f4f0;
+    --beauty-white: #ffffff;
+}
+
+/* Website background */
+
+body {
+    background-color: var(--beauty-cream);
+    color: var(--beauty-dark);
+}
+
+/* Headings */
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--beauty-dark);
+}
+
+/* General links */
+
+a {
+    color: var(--beauty-brown);
+}
+
+/* Navigation links */
+
+.wp-block-navigation a {
+    color: var(--beauty-dark);
+}
+
+/* ==========================================
+   03. HEADER & NAVIGATION
+   ========================================== */
+
+/* Header layout and spacing */
+
+header.wp-block-template-part {
+    padding: 20px 30px;
+}
+
+/* Navigation spacing */
+
+.wp-block-navigation {
+    gap: 25px;
+}
+
+/* Navigation links */
+
+.wp-block-navigation .wp-block-navigation-item__content {
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Navigation hover effect */
+
+.wp-block-navigation .wp-block-navigation-item__content:hover {
+    color: var(--beauty-brown);
+    text-decoration: underline;
+}
+
+/* Keyboard focus indicator */
+
+.wp-block-navigation .wp-block-navigation-item__content:focus-visible {
+    outline: 3px solid var(--beauty-brown);
+    outline-offset: 4px;
+    border-radius: 3px;
+}
+
+/* ==========================================
+   04. LAYOUT & SPACING
+   ========================================== */
+
+/* Keep website content centered and readable */
+
+.wp-site-blocks {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* Create consistent spacing between sections */
+
+.wp-block-group {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Prevent images from overflowing containers */
+
+.wp-block-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Advanced CSS Technique 2:
+   Responsive CSS Grid automatically adjusts
+   service cards based on available screen width.
+*/
+
+.wp-block-columns.beauty-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+    gap: 25px;
+}
+
+/* Service cards */
+
+.wp-block-columns.beauty-grid > .wp-block-column {
+    min-width: 0;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-basis: auto !important;
+}
+
+/* ==========================================
+   05. BUTTONS & LINKS
+   ========================================== */
+
+/* Button hover state */
+
+.wp-block-button .wp-block-button__link:hover {
+    background-color: #765344 !important;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+}
+
+/* Button keyboard focus */
+
+.wp-block-button .wp-block-button__link:focus-visible {
+    outline: 3px solid #765344;
+    outline-offset: 4px;
+}
+
+/* General link hover */
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* General link keyboard focus */
+
+a:focus-visible {
+    outline: 3px solid #765344;
+    outline-offset: 4px;
+}
+
+/* ==========================================
+   06. CONTENT COMPONENTS
+   ========================================== */
+
+/* All service cards */
+
+.wp-block-columns.beauty-grid > .wp-block-column {
+    background-color: #ffffff;
+    border: 1px solid #e4d8d0;
+    border-radius: 12px;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+/* Service images */
+
+.wp-block-columns.beauty-grid .wp-block-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+/* Service headings */
+
+.wp-block-columns.beauty-grid h3 {
+    font-family: Georgia, serif;
+    font-size: clamp(20px, 2vw, 26px);
+    margin-bottom: 15px;
+}
+
+/* Service descriptions */
+
+.wp-block-columns.beauty-grid p {
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
